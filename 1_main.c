@@ -10,5 +10,4 @@ int main()
     printf("%f inCelsius is equal to %.1f in Fahrenheit.\n",temperatureC,tempertureF);
 
     return 0;
-
 }
