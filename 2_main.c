@@ -4,10 +4,9 @@
 #include<stdio.h>
 int main(void)
 {
-int grade=0;
 int score;
     printf("请输入你的成绩(0-100):");
-    scanf("%d",&grade);
+    scanf("%d",&score);
 if(score>=90&&score<=100)
 {
     printf("A");
