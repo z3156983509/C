@@ -10,23 +10,23 @@ int score;
     scanf("%d",&grade);
 if(score>=90&&score<=100)
 {
-    printf("grade=A");
+    printf("A");
 }
 else if(score>=80&&score<90)
 {
-    printf("grade=B");
+    printf("B");
 }
 else if(score>=70&&score<80)
 {
-    printf("grade=C");
+    printf("C");
 }
 else if(score>=60&&score<70)
 {
-    printf("grade=D");
+    printf("D");
 }
 else
 {
-    printf("grade=E");
+    printf("E");
 }
 
 }
