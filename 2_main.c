@@ -4,34 +4,29 @@
 #include<stdio.h>
 int main(void)
 {
-int a,b;
-char op;
-scanf("%d %d %c",&a,&b,&op);
-switch(op)
+int grade=0;
+int score;
+    printf("请输入你的成绩(0-100):");
+    scanf("%d",&grade);
+if(score>=90&&score<=100)
 {
-   case '+':
-   printf("%d\n",a+b);
-   break;
-   case'-':
-   printf("%d\n",a-b);
-   break;
-   case'*':
-   printf("%d\n",a*b);
-   break;
-   case'/':
-   if(b!=0)
-   {
-    printf("%.1f\n",a*1.0/b);
-   }
-   else{
-    printf("除数不能为0\n");
-   }
-   break;
-   default:
-   printf("无效运算符\n");
-   break;
-
+    printf("grade=A");
 }
- return 0;
+else if(score>=80&&score<90)
+{
+    printf("grade=B");
+}
+else if(score>=70&&score<80)
+{
+    printf("grade=C");
+}
+else if(score>=60&&score<70)
+{
+    printf("grade=D");
+}
+else
+{
+    printf("grade=E");
+}
 
 }
