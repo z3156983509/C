@@ -1,27 +1,37 @@
+//202510302105
+//315698359@qq.com
+//周娜
 #include<stdio.h>
 int main(void)
-{print("请输入该学生的整数成绩");
-scanf("%d",&score);
-char grade;
-if(score>=90&&score<=100)
 {
-    printf("grade=A");
-}
-eles if(score>=80&&score<90)
+int a,b;
+char op;
+scanf("%d %d %c",&a,&b,&op);
+switch(op)
 {
-    printf("grade=B");
+   case '+':
+   printf("%d\n",a+b);
+   break;
+   case'-':
+   printf("%d\n",a-b);
+   break;
+   case'*':
+   printf("%d\n",a*b);
+   break;
+   case'/':
+   if(b!=0)
+   {
+    printf("%.1f\n",a*1.0/b);
+   }
+   else{
+    printf("除数不能为0\n");
+   }
+   break;
+   default:
+   printf("无效运算符\n");
+   break;
+
 }
-eles if(score>=70&&score<80)
-{
-    printf("grade=C");
-}
-eles if(score>=60&&score<70)
-{
-    ptintf("grade=D");
-}
-else
-{
-    print("grade=E")
-}
-return 0;
+ return 0;
+
 }
