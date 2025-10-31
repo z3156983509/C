@@ -9,16 +9,23 @@ int main()
     scanf("%d",&n);
     int i;
     int isPrime=1;
+    if(n==1)
+    {
+        isPrime=0;
+    }
+    else {
  while(i<n)
     {
-        i++;
         if (n%i==0)
         {
         isPrime=0;
         break;
         }
+        i++;
+      
     }
-    if(isPrime==1&&n>1)
+}
+    if(isPrime==1)
     {
     printf("密钥安全，密码设置成功\n");
     }
