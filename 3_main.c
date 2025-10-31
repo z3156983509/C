@@ -2,36 +2,29 @@
 //3156983509@qq.com
 //周娜
 #include<stdio.h>
-int main(void)
+int main()
 {
-int a,b;
-char op;
-scanf("%d %d %c",&a,&b,&op);
-switch(op)
-{
-   case '+':
-   printf("%d\n",a+b);
-   break;
-   case'-':
-   printf("%d\n",a-b);
-   break;
-   case'*':
-   printf("%d\n",a*b);
-   break;
-   case'/':
-   if(b!=0)
-   {
-    printf("%.1f\n",a*1.0/b);
-   }
-   else{
-    printf("除数不能为0\n");
-   }
-   break;
-   default:
-   printf("无效运算符\n");
-   break;
-
-}
- return 0;
-
+    int n;
+    printf("请输入一个数:");
+    scanf("%d",&n);
+    int i;
+    int isPrime=1;
+ while(i<n)
+    {
+        i++;
+        if (n%i==0)
+        {
+        isPrime=0;
+        break;
+        }
+    }
+    if(isPrime==1)
+    {
+    printf("密钥安全，密码设置成功\n");
+    }
+    else
+    {
+        printf("密钥不安全，请重新输入\n");
+    }
+return 0;
 }
