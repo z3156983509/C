@@ -7,7 +7,7 @@ int main()
     int n;
     printf("请输入一个数:");
     scanf("%d",&n);
-    int i;
+    int i=2;
     int isPrime=1;
     if(n==1)
     {
