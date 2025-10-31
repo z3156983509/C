@@ -2,18 +2,19 @@
 //3156983509@qq.com
 //周娜
 #include<stdio.h>
-int main(void)
+int main()
+{ int x,y,z;
+int i=100;
+while(i<999&&i>=100)
 {
-    int a,b,c;
-    printf("请输入三条线段长：");
-    scanf("%d %d %d",&a,&b,&c);
-if((a+b>c)&&(a+c>b)&&(b+c>a))
+i++;
+x=i/100;
+y=(i/10)%10;
+z=i%10;
+if(i==x*x*x+y*y*y+z*z*z)
 {
-    printf("可以组成三角形");
+    printf ("%d ",i);
 }
-else
-{
-    printf("不能组成三角形");
 }
-return 0;
+    return 0;
 }
