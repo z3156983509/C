@@ -2,30 +2,18 @@
 //315698359@qq.com
 //周娜
 #include<stdio.h>
-int main(void)
+int main()
+{ int i=0;
+ int x,y,z;
+ for (i=100;i<1000;i++)
 {
-int score;
-    printf("请输入你的成绩(0-100):");
-    scanf("%d",&score);
-if(score>=90&&score<=100)
+x=i/100;
+y=(i/10)%10;
+z=i%10;
+if(i==x*x*x+y*y*y+z*z*z)
 {
-    printf("A");
+    printf ("%d ",i);
 }
-else if(score>=80&&score<90)
-{
-    printf("B");
 }
-else if(score>=70&&score<80)
-{
-    printf("C");
-}
-else if(score>=60&&score<70)
-{
-    printf("D");
-}
-else
-{
-    printf("E");
-}
-
+    return 0;
 }
