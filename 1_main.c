@@ -3,17 +3,27 @@
 //周娜
 #include<stdio.h>
 int main()
-{ int i=0;
- int x,y,z;
- for (i=100;i<1000;i++)
 {
-x=i/100;
-y=(i/10)%10;
-z=i%10;
-if(i==x*x*x+y*y*y+z*z*z)
-{
-    printf ("%d ",i);
-}
-}
-    return 0;
+    int n;
+    printf("请输入一个数:");
+    scanf("%d",&n);
+    int i;
+    int isPrime=1;
+    for(i=2;i<n;i++)
+    {
+        if (n%i==0)
+        {
+        isPrime=0;
+        break;
+        }
+    }
+    if(isPrime==1)
+    {
+    printf("密钥安全，密码设置成功\n");
+    }
+    else
+    {
+        printf("密钥不安全，请重新输入\n");
+    }
+return 0;
 }
