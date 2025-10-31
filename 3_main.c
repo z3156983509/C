@@ -18,7 +18,7 @@ int main()
         break;
         }
     }
-    if(isPrime==1)
+    if(isPrime==1&&n>1)
     {
     printf("密钥安全，密码设置成功\n");
     }
