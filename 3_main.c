@@ -4,34 +4,22 @@
 #include<stdio.h>
 int main()
 {
-    int n;
-    printf("请输入一个数:");
-    scanf("%d",&n);
-    int i=2;
-    int isPrime=1;
-    if(n==1)
-    {
-        isPrime=0;
+    int arr[10];
+    for(int i=0;i<10;i++){
+        scanf("%d",&arr[i]);
     }
-    else {
- while(i<n)
-    {
-        if (n%i==0)
-        {
-        isPrime=0;
-        break;
-        }
-        i++;
-      
-    }
+    for(int i=0;i<9;i++){
+for(int j=0;j<9-i;j++){
+if(arr[j]>arr[j+1]){
+    int temp=arr[j];
+    arr[j]=arr[j+1];
+    arr[j+1]=temp;
 }
-    if(isPrime==1)
-    {
-    printf("密钥安全，密码设置成功\n");
+}
     }
-    else
-    {
-        printf("密钥不安全，请重新输入\n");
+    for(int i=0;i<10;i++){
+       printf("%d",arr[i]);
+       printf(" ");
     }
-return 0;
+    return 0;
 }
