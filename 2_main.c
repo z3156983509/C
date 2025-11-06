@@ -2,18 +2,19 @@
 //315698359@qq.com
 //周娜
 #include<stdio.h>
-int main()
-{ int i=0;
- int x,y,z;
- for (i=100;i<1000;i++)
+int main ()
 {
-x=i/100;
-y=(i/10)%10;
-z=i%10;
-if(i==x*x*x+y*y*y+z*z*z)
-{
-    printf ("%d ",i);
+    int a[3][3];
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+        scanf("%d",&a[i][j]);
+            }
+        }
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        printf("%d ",a[i][j]);
+    }
+    printf("\n");
 }
-}
-    return 0;
+return 0;
 }
