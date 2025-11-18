@@ -2,24 +2,19 @@
 //3156983509@qq.com
 //周娜
 #include<stdio.h>
-int main()
-{
-    int arr[10];
-    for(int i=0;i<10;i++){
-        scanf("%d",&arr[i]);
-    }
-    for(int i=0;i<9;i++){
-for(int j=0;j<9-i;j++){
-if(arr[j]>arr[j+1]){
-    int temp=arr[j];
-    arr[j]=arr[j+1];
-    arr[j+1]=temp;
+void swap(int*a,int*b){
+    int temp=*a;
+    *a=*b;
+    *b=temp;
 }
-}
-    }
-    for(int i=0;i<10;i++){
-       printf("%d",arr[i]);
-       printf(" ");
-    }
+int main(){
+    int num1=0;
+    int num2=0;
+    scanf("%d %d",&num1,&num2);
+    int *a=&num1;
+    int *b=&num2;
+    swap(a,b);
+    printf("%d %d",num1,num2);
     return 0;
+
 }
