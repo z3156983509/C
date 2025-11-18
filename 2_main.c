@@ -2,23 +2,21 @@
 //315698359@qq.com
 //周娜
 #include<stdio.h>
-int main ()
-{
-    int a[3][3];
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-        scanf("%d",&a[i][j]);
-            }
-        }
-for(int i=0;i<3;i++){
-    for(int j=0;j<3;j++){
-        printf("%d",a[j][i]);
-          if(j<2)
-        printf(" ");
+int main(){
+    int arr[5];
+    int*ptr=arr;
+   for(int i=0;i<5;i++){
+    scanf("%d",ptr+i);
+   }
+   for(int i=0;i<5;i++){
+    *(ptr+i)*=2;
+   }
+   for(int i=0;i<5;i++){
+    if(i!=5){
+        printf("%d ",arr[i]);
     }
-    printf("\n");
-     
+    else
+     printf("%d",arr[i]);
+   }
+   return 0;
 }
-return 0;
-}
-
