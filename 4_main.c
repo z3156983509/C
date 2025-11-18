@@ -2,24 +2,25 @@
 //3156983509@qq.com
 //周娜
 #include<stdio.h>
-double power(double a,int b)
+void add(int *a)
 {
-    double result=1.0;
-    int i;
-    for (int i=0;i<b;i++)
-    {
-        result*=a;
+    for(int i=0;i<5;i++){
+        *(a+i)+=1;
     }
-    return result;
 }
-int main()
-{
-    double sum=0;
-    int i;
-    for(i=1;i<=5;i++)
-    {
-        sum+=power(i,2);
+int main(){
+int arr[5];
+for(int i=0;i<5;i++){
+    scanf("%d",&arr[i]);
+}
+int *p=&arr[0];
+add(p);
+for(int i=0;i<5;i++){
+    if(i!=4){
+    printf("%d ",arr[i]);
     }
-    printf("%.0f\n",sum);
+    else
+    printf("%d",arr[i]);
+}
     return 0;
 }
