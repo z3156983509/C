@@ -2,21 +2,12 @@
 //3156983509@qq.com
 //周娜
 #include<stdio.h>
-int main ()
-{
-    int a[3][3];
-        for(int i=0;i<3;i++){
-            for(int j=0;j<3;j++){
-        scanf("%d",&a[i][j]);
-            }
-        }
-for(int i=0;i<3;i++){
-    for(int j=0;j<3;j++){
-        printf("%d",a[i][j]); 
-          if(j<2)
-        printf(" ");
-    }
-    printf("\n");
-}
+int main(){
+    int a=0;
+    scanf("%d",&a);
+    int *ptr=&a;
+    *ptr+=10;
+    printf("%d,",a);
+    printf("%d",*ptr);
 return 0;
 }
