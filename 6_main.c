@@ -2,33 +2,18 @@
 //3156983509@qq.com
 //周娜
 #include<stdio.h>
-int sumarray(int arr[],int b)
-{
-    int sum=0;
-    for(int i=0;i<b;i++)
-    {
-        sum+=arr[i];
+#include<stdlib.h>
+int main(){
+int *arr=NULL;
+ arr=(int *)malloc(5*sizeof(int));
+ for(int i=0;i<5;i++){
+    scanf("%d",arr+i);
+ }
+ for(int i=0;i<5;i++){
+    if(i<4){
+    printf("%d ",*(arr+i));
     }
-    return sum;
-}
-int productarray(int arr[],int c)
-{
-    int product=1;
-    for (int i=0;i<c;i++)
-    {
-        product*=arr[i];
-    }
-    return product;
-}
-int main()
-{
-    int arr[5];
-for(int i=0;i<5;i++)
-{
-    scanf("%d",&arr[i]);
-}
-int sum=sumarray(arr,5);
-int product=productarray(arr,5);
-printf("%d %d",sum,product);
-return 0;
+else printf("%d\n",*(arr+i));
+ }
+ free(arr);
 }
